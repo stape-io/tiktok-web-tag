@@ -1,0 +1,5 @@
+homepage: 'https://stape.io/'
+documentation: 'https://github.com/stape-io/tiktok-web-tag'
+versions:
+  - sha: 66669ac4f02c27f5d66c376e802da4603ad8dcd9
+    changeNotes: Initial release.
