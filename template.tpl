@@ -51,7 +51,8 @@ ___TEMPLATE_PARAMETERS___
             "type": "NON_EMPTY"
           }
         ],
-        "help": "Array, single item string or comma separated string of Pixel IDs."
+        "help": "Array, single item string or comma separated string of Pixel IDs.",
+        "alwaysInSummary": true
       },
       {
         "type": "SELECT",
@@ -194,7 +195,8 @@ ___TEMPLATE_PARAMETERS___
             "displayName": "Event Type"
           }
         ],
-        "defaultValue": "override"
+        "defaultValue": "override",
+        "alwaysInSummary": true
       },
       {
         "type": "CHECKBOX",
@@ -219,7 +221,8 @@ ___TEMPLATE_PARAMETERS___
               }
             ]
           }
-        ]
+        ],
+        "alwaysInSummary": true
       },
       {
         "type": "CHECKBOX",
@@ -259,7 +262,8 @@ ___TEMPLATE_PARAMETERS___
             ]
           }
         ],
-        "defaultValue": true
+        "defaultValue": true,
+        "alwaysInSummary": true
       }
     ]
   },
