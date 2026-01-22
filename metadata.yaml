@@ -1,7 +1,7 @@
 homepage: 'https://stape.io/'
 documentation: 'https://github.com/stape-io/tiktok-web-tag'
 versions:
-  - sha: e8a88290851d7a5af558c7f1e1a2e3d1266a2868
+  - sha: 9357f95b8bf17e638dad494fb2862207fd36ed1f
     changeNotes: Updated auto-mapping from dataLayer for items, value and currency.
   - sha: df23fd507efb5b2ae4ebacd7333414d5d0341c51
     changeNotes: Forced configuration fields to be displayed in UI when the tag is in summary view.
