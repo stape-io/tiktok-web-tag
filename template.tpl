@@ -1093,7 +1093,8 @@ function addUAEventParameters(eventName, eventParameters, ecommerce) {
   return eventParameters;
 }
 
-function addGA4EventParameters(eventParameters, items) {
+function addGA4EventParameters(eventParameters, ecommerce) {
+  const items = copyFromDataLayerWithVersion('items') || ecommerce.items;
   let currencyFromItems = '';
   let valueFromItems = 0;
 
@@ -1132,10 +1133,11 @@ function addGA4EventParameters(eventParameters, items) {
     });
   }
 
-  const value = copyFromDataLayerWithVersion('value') || valueFromItems;
+  const value = ecommerce.value || valueFromItems || copyFromDataLayerWithVersion('value');
   if (value) eventParameters.value = makeNumber(value);
 
-  const currency = copyFromDataLayerWithVersion('currency') || currencyFromItems;
+  const currency =
+    ecommerce.currency || currencyFromItems || copyFromDataLayerWithVersion('currency');
   if (currency) eventParameters.currency = currency;
 
   const searchTerm = copyFromDataLayerWithVersion('search_term');
@@ -1146,28 +1148,21 @@ function addGA4EventParameters(eventParameters, items) {
 
 function getEventParameters(data, eventName) {
   const eventParameters = {
-    gtm_version: 'stape_gtm_1_0_0',
+    gtm_version: 'stape_gtm_1_0_1',
     event_trigger_source: 'GoogleTagManagerClient'
   };
 
   if (data.enableLDU && data.modeLDU === 'single') eventParameters.limited_data_use = true;
 
   if (data.enableDataLayerMapping) {
-    const ecommerceObjFromDataLayer = copyFromDataLayerWithVersion('ecommerce');
-    let itemsObjFromDataLayer = copyFromDataLayerWithVersion('items');
-    if (
-      getType(itemsObjFromDataLayer) !== 'array' &&
-      getType(ecommerceObjFromDataLayer) === 'object' &&
-      getType(ecommerceObjFromDataLayer.items) === 'array'
-    ) {
-      itemsObjFromDataLayer = ecommerceObjFromDataLayer.items;
+    let ecommerceObjFromDataLayer = copyFromDataLayerWithVersion('ecommerce');
+    if (getType(ecommerceObjFromDataLayer) !== 'object') {
+      ecommerceObjFromDataLayer = {};
     }
 
-    if (itemsObjFromDataLayer) {
-      addGA4EventParameters(eventParameters, itemsObjFromDataLayer);
-    }
+    addGA4EventParameters(eventParameters, ecommerceObjFromDataLayer);
 
-    if (!eventParameters.content_type && ecommerceObjFromDataLayer) {
+    if (!eventParameters.content_type) {
       addUAEventParameters(eventName, eventParameters, ecommerceObjFromDataLayer);
     }
   }
