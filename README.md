@@ -2,7 +2,7 @@
 
 The **TikTok Pixel by Stape** tag integrates the TikTok Pixel into your website via a Google Tag Manager Web container. It allows you to send standard or custom events to TikTok, including user data for Advanced Matching, to improve ad performance and attribution.
 
-✅ Unlike other TikTok Pixel tag templates, this tag **does not** require the Base Code installed as a Custom HTML tag to work.
+✅ Unlike other TikTok Pixel tag templates, this tag **does not** require the Base Code installed as a Custom HTML tag to work. Simply add the tag to your GTM container and it will work.
 
 ## How to Use
 
