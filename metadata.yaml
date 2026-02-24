@@ -1,6 +1,8 @@
 homepage: 'https://stape.io/'
 documentation: 'https://github.com/stape-io/tiktok-web-tag'
 versions:
+  - sha: 9ad173e9c8556df1d179567527acce7816252864
+    changeNotes: Added order_id parameter support.
   - sha: 9357f95b8bf17e638dad494fb2862207fd36ed1f
     changeNotes: Updated auto-mapping from dataLayer for items, value and currency.
   - sha: df23fd507efb5b2ae4ebacd7333414d5d0341c51
