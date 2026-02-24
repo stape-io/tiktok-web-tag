@@ -369,10 +369,13 @@ function addUAEventParameters(eventName, eventParameters, ecommerce) {
 
   if (eventActionMap[eventName]) {
     const action = eventActionMap[eventName];
+    const hasActionObject = getType(ecommerce[action]) === 'object';
+    const hasActionFieldObject =
+      hasActionObject && getType(ecommerce[action].actionField) === 'object';
     let valueFromItems = 0;
 
     if (
-      getType(ecommerce[action]) === 'object' &&
+      hasActionObject &&
       getType(ecommerce[action].products) === 'array' &&
       ecommerce[action].products.length
     ) {
@@ -401,19 +404,24 @@ function addUAEventParameters(eventName, eventParameters, ecommerce) {
     }
 
     const value =
-      (getType(ecommerce[action].actionField) === 'object' && ecommerce[action].actionField.revenue
+      (hasActionFieldObject && ecommerce[action].actionField.revenue
         ? ecommerce[action].actionField.revenue
         : undefined) || valueFromItems;
     if (value) eventParameters.value = makeNumber(value);
 
     const currency = ecommerce.currencyCode;
     if (currency) eventParameters.currency = ecommerce.currencyCode;
+
+    if (eventName === 'Purchase') {
+      const orderId = hasActionFieldObject ? ecommerce[action].actionField.id : undefined;
+      if (orderId) eventParameters.order_id = orderId;
+    }
   }
 
   return eventParameters;
 }
 
-function addGA4EventParameters(eventParameters, ecommerce) {
+function addGA4EventParameters(eventName, eventParameters, ecommerce) {
   const items = copyFromDataLayerWithVersion('items') || ecommerce.items;
   let currencyFromItems = '';
   let valueFromItems = 0;
@@ -460,6 +468,11 @@ function addGA4EventParameters(eventParameters, ecommerce) {
     ecommerce.currency || currencyFromItems || copyFromDataLayerWithVersion('currency');
   if (currency) eventParameters.currency = currency;
 
+  if (eventName === 'Purchase') {
+    const orderId = ecommerce.transaction_id || copyFromDataLayerWithVersion('transaction_id');
+    if (orderId) eventParameters.order_id = orderId;
+  }
+
   const searchTerm = copyFromDataLayerWithVersion('search_term');
   if (searchTerm) eventParameters.search_string = makeString(searchTerm);
 
@@ -480,7 +493,7 @@ function getEventParameters(data, eventName) {
       ecommerceObjFromDataLayer = {};
     }
 
-    addGA4EventParameters(eventParameters, ecommerceObjFromDataLayer);
+    addGA4EventParameters(eventName, eventParameters, ecommerceObjFromDataLayer);
 
     if (!eventParameters.content_type) {
       addUAEventParameters(eventName, eventParameters, ecommerceObjFromDataLayer);
