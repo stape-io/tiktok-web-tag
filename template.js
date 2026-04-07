@@ -18,11 +18,41 @@ const setInWindow = require('setInWindow');
 const sha256 = require('sha256');
 const templateStorage = require('templateStorage');
 
+// Call-once methods.
+let gtmOnSuccess = () => {
+  gtmOnSuccess = () => {};
+  return data.gtmOnSuccess();
+};
+
+let gtmOnFailure = () => {
+  gtmOnFailure = () => {};
+  return data.gtmOnFailure();
+};
+
 /*==============================================================================
 ==============================================================================*/
 
+const PARTNER_NAME = 'stape_gtm_1_2_0';
 const queueName = 'ttq';
-getOrCreateTikTokQueue(queueName);
+
+const queue = getOrCreateTikTokQueue(queueName);
+
+const isConsentExplicitlyRevokedAndNotOptInMode =
+  data.consentOptMode !== 'optin' &&
+  (data.enableGoogleConsentMode
+    ? !isConsentGranted('ad_storage')
+    : isUIConsentFieldDenied(data.consent));
+if (isConsentExplicitlyRevokedAndNotOptInMode) {
+  // Only adds .revokeConsent if the queue was already taken over by SDK.
+  // Otherwise (not taken over yet), .track/.identify commands collect prior to consent granted will be executed when calling .load and .grantConsent.
+  const queueWasTakenOverBySDK = queue && (queue.initialize || queue._mounted);
+  if (queueWasTakenOverBySDK) {
+    callInWindow(queueName + '.revokeConsent');
+  }
+
+  return gtmOnSuccess();
+}
+
 setConsent(data, queueName);
 sendEvent(data, queueName);
 
@@ -43,7 +73,8 @@ function getOrCreateTikTokQueue(queueName) {
   // "pixelId" parameter is not present in the original method.
   // We need it to determine which queue to be used during the execution of the inner function.
   newQueue.setAndDefer = (queue, command, pixelId) => {
-    queue[command] = () => {
+    // Do not use arrow function here to avoid problems with 'arguments'.
+    queue[command] = function () {
       const currentQueue = copyFromWindow(queueName);
       const currentPixelQueue = pixelId
         ? (currentQueue._i[pixelId] = currentQueue._i[pixelId] || [])
@@ -83,31 +114,24 @@ function getOrCreateTikTokQueue(queueName) {
     _o[pixelId] = options || {};
     setInWindow(queueName + '._o', _o, true);
 
-    let asyncScriptLoadManager;
+    let asyncManager;
     if (
       getType(asyncScriptLoadManagerStorageConfig) === 'object' &&
-      asyncScriptLoadManagerStorageConfig.asyncScriptLoadManagerStorageKey
+      asyncScriptLoadManagerStorageConfig.key
     ) {
-      const asyncScriptLoadManagerStorageKey =
-        asyncScriptLoadManagerStorageConfig.asyncScriptLoadManagerStorageKey;
-      asyncScriptLoadManager = templateStorage.getItem(asyncScriptLoadManagerStorageKey);
-      if (getType(asyncScriptLoadManager) === 'object') {
-        asyncScriptLoadManager.pendingInjectScriptCalls += 1;
-        templateStorage.setItem(asyncScriptLoadManagerStorageKey, asyncScriptLoadManager);
-      }
+      asyncManager = getAsyncScriptLoadManager(asyncScriptLoadManagerStorageConfig.key);
+      asyncManager.addPendingCall();
     }
 
     injectScript(
       scriptUrl,
       () => {
-        if (getType(asyncScriptLoadManager) === 'object') {
-          asyncScriptLoadManager.maybeCallTagExecutionHandler();
-        }
+        if (asyncManager) asyncManager.completeCall();
       },
       () => {
-        if (getType(asyncScriptLoadManager) === 'object') {
-          asyncScriptLoadManager.someFailed = true;
-          asyncScriptLoadManager.maybeCallTagExecutionHandler();
+        if (asyncManager) {
+          asyncManager.markFailed();
+          asyncManager.completeCall();
         }
       },
       'ttqPixel-' + pixelId
@@ -115,29 +139,49 @@ function getOrCreateTikTokQueue(queueName) {
   };
 
   setInWindow(queueName, newQueue, true);
+  return newQueue;
+}
+
+function deferUntilGoogleConsentGranted(isConsentGranted, callback) {
+  if (isConsentGranted) {
+    callback();
+    return;
+  }
+
+  const callbacksKey = 'ttq_consent_callbacks_ad_storage';
+  const callbacks = templateStorage.getItem(callbacksKey) || [];
+  callbacks.push(callback);
+  templateStorage.setItem(callbacksKey, callbacks);
+
+  const listenerAddedKey = 'ttq_consent_listener_added_ad_storage';
+  if (!templateStorage.getItem(listenerAddedKey)) {
+    templateStorage.setItem(listenerAddedKey, true);
+    addConsentListener('ad_storage', (type, granted) => {
+      if (type !== 'ad_storage' || !granted) return;
+      const queuedCallbacks = templateStorage.getItem(callbacksKey) || [];
+      templateStorage.setItem(callbacksKey, []);
+      queuedCallbacks.forEach((cb) => cb());
+    });
+  }
 }
 
 function setConsent(data, queueName) {
   if (data.enableGoogleConsentMode) {
-    if (!isConsentGranted('ad_storage')) {
-      callInWindow(queueName + '.revokeConsent');
+    if (data.consentOptMode === 'optin' && !isTrackingPermitted(data)) {
+      callInWindow(queueName + '.holdConsent');
+    }
 
-      let wasCalled = false;
-      addConsentListener('ad_storage', (consentType, granted) => {
-        if (wasCalled || consentType !== 'ad_storage' || !granted) return;
-        wasCalled = true;
-        callInWindow(queueName + '.grantConsent');
-      });
+    deferUntilGoogleConsentGranted(isTrackingPermitted(data), () => {
+      callInWindow(queueName + '.grantConsent');
+    });
+  } else {
+    // Manual consent
+    if (!isTrackingPermitted(data)) {
+      callInWindow(queueName + '.holdConsent');
     } else {
       callInWindow(queueName + '.grantConsent');
     }
-
-    return;
   }
-
-  if (data.consentOptMode === 'optin') callInWindow(queueName + '.holdConsent');
-  if (isUIConsentFieldGranted(data.consent)) callInWindow(queueName + '.grantConsent');
-  else if (isUIConsentFieldDenied(data.consent)) callInWindow(queueName + '.revokeConsent');
 }
 
 function getLoadOptions(data) {
@@ -205,13 +249,13 @@ function pushEventIdToDataLayer(data) {
   });
 }
 
-function getEventUserDataEnhancement() {
-  if (localStorage) {
-    const gtmeec = localStorage.getItem('gtmeec-tt');
-    if (gtmeec) {
-      const gtmeecParsed = JSON.parse(gtmeec);
-      if (getType(gtmeecParsed) === 'object') return gtmeecParsed;
-    }
+function getEventUserDataEnhancement(canInteractWithStorage) {
+  if (!canInteractWithStorage || !localStorage) return {};
+
+  const gtmeec = localStorage.getItem('gtmeec-tt');
+  if (gtmeec) {
+    const gtmeecParsed = JSON.parse(gtmeec);
+    if (getType(gtmeecParsed) === 'object') return gtmeecParsed;
   }
 
   return {};
@@ -281,16 +325,17 @@ function hashUserDataFields(userData, storeUserDataInLocalStorage) {
 }
 
 function storeUserDataInLocalStorage(userData) {
-  if (!objHasProps(userData)) return;
+  if (!localStorage || !objHasProps(userData)) return;
+
   const gtmeec = JSON.stringify(userData);
   localStorage.setItem('gtmeec-tt', gtmeec);
 }
 
-function storeEventUserDataEnhancement(data, userData) {
-  if (localStorage && objHasProps(userData)) {
-    if (!data.storeUserDataHashed) storeUserDataInLocalStorage(userData);
-    else hashUserDataFields(userData, storeUserDataInLocalStorage);
-  }
+function storeEventUserDataEnhancement(data, canInteractWithStorage, userData) {
+  if (!canInteractWithStorage || !localStorage || !objHasProps(userData)) return;
+
+  if (!data.storeUserDataHashed) storeUserDataInLocalStorage(userData);
+  else hashUserDataFields(userData, storeUserDataInLocalStorage);
 }
 
 function addUserData(userData, userDataFrom, useDL) {
@@ -298,7 +343,6 @@ function addUserData(userData, userDataFrom, useDL) {
     userDataFrom.email ||
     userDataFrom.sha256_email_address ||
     userDataFrom.email_address ||
-    userDataFrom.email ||
     userDataFrom.em;
   const emailType = getType(email);
   if (emailType === 'array' || emailType === 'object') email = email[0];
@@ -326,13 +370,26 @@ function addUserData(userData, userDataFrom, useDL) {
   return userData;
 }
 
+function isTrackingPermitted(data) {
+  if (data.enableGoogleConsentMode) {
+    return isConsentGranted('ad_storage');
+  } else {
+    // Manual consent
+    return (
+      data.consentOptMode !== 'optin' ||
+      (data.consentOptMode === 'optin' && isUIConsentFieldGranted(data.consent))
+    );
+  }
+}
+
 function getUserData(data) {
   if (!data.enableAdvancedMatching) return;
 
+  const canInteractWithStorage = isTrackingPermitted(data);
   let userData = {};
 
   if (data.enableEventUserDataEnhancement) {
-    userData = getEventUserDataEnhancement();
+    userData = getEventUserDataEnhancement(canInteractWithStorage);
   }
 
   if (data.enableDataLayerMapping) {
@@ -353,7 +410,7 @@ function getUserData(data) {
   if (objIsEmptyOrContainsOnlyFalsyValues(userData)) return;
 
   if (data.enableEventUserDataEnhancement) {
-    storeEventUserDataEnhancement(data, userData);
+    storeEventUserDataEnhancement(data, canInteractWithStorage, userData);
   }
 
   return userData;
@@ -481,7 +538,7 @@ function addGA4EventParameters(eventName, eventParameters, ecommerce) {
 
 function getEventParameters(data, eventName) {
   const eventParameters = {
-    gtm_version: 'stape_gtm_1_0_1',
+    gtm_version: PARTNER_NAME,
     event_trigger_source: 'GoogleTagManagerClient'
   };
 
@@ -508,40 +565,63 @@ function getEventParameters(data, eventName) {
     mergeObj(eventParameters, makeTableMap(data.eventParametersList, 'name', 'value'));
   }
 
-  if (getType(data.eventCustomParametersFromVariable) === 'object') {
-    mergeObj(eventParameters, data.eventCustomParametersFromVariable);
+  if (getType(data.additionalEventParametersFromVariable) === 'object') {
+    mergeObj(eventParameters, data.additionalEventParametersFromVariable);
   }
 
-  if (data.eventCustomParametersList && data.eventCustomParametersList.length) {
-    mergeObj(eventParameters, makeTableMap(data.eventCustomParametersList, 'name', 'value'));
+  if (data.additionalEventParametersList && data.additionalEventParametersList.length) {
+    mergeObj(eventParameters, makeTableMap(data.additionalEventParametersList, 'name', 'value'));
   }
 
   return eventParameters;
 }
 
 function sendEvent(data, queueName) {
-  const pixelIds = getType(data.pixelIds) === 'string' ? data.pixelIds.split(',') : data.pixelIds;
-  if (getType(pixelIds) !== 'array' || pixelIds.length === 0) return data.gtmOnFailure();
+  let pixelIds = getType(data.pixelIds) === 'string' ? data.pixelIds.split(',') : data.pixelIds;
+  if (getType(pixelIds) === 'array') {
+    pixelIds = pixelIds.map((p) => makeString(p).trim()).filter((p) => p);
+  }
+  if (getType(pixelIds) !== 'array' || pixelIds.length === 0) return gtmOnFailure();
 
   const initializedPixelIds = copyFromWindow('_tiktok_gtm_ids') || {};
-  let loadWasNotCalled = true;
   const loadOptions = getLoadOptions(data);
   const userData = getUserData(data);
   let identifyWasNotCalled = true;
   const eventName = getEventName(data);
   const eventParameters = getEventParameters(data, eventName);
 
-  const asyncScriptLoadManagerStorageKey = setAsyncScriptLoadManager(data);
+  const asyncManager = initAsyncScriptLoadManager(data);
 
   pixelIds.forEach((pixelId) => {
     const pixelIdIsNotInitialized = !initializedPixelIds[pixelId];
+
     if (pixelIdIsNotInitialized) {
-      initializedPixelIds[pixelId] = true;
-      loadWasNotCalled = false;
-      setInWindow('_tiktok_gtm_ids', initializedPixelIds, true);
-      callInWindow(queueName + '.load', pixelId, loadOptions, {
-        asyncScriptLoadManagerStorageKey: asyncScriptLoadManagerStorageKey
-      });
+      const loadPixel = () => {
+        const asyncScriptLoadManagerStorageConfig = {
+          key: asyncManager.key
+        };
+        callInWindow(
+          queueName + '.load',
+          pixelId,
+          loadOptions,
+          asyncScriptLoadManagerStorageConfig
+        );
+      };
+
+      let willLoad = false;
+      if (data.enableGoogleConsentMode) {
+        willLoad = true;
+        deferUntilGoogleConsentGranted(isTrackingPermitted(data), () => loadPixel());
+      } else if (isTrackingPermitted(data)) {
+        // Manual consent
+        willLoad = true;
+        loadPixel();
+      }
+
+      if (willLoad) {
+        initializedPixelIds[pixelId] = true;
+        setInWindow('_tiktok_gtm_ids', initializedPixelIds, true);
+      }
     }
 
     if (identifyWasNotCalled && objHasProps(userData)) {
@@ -557,9 +637,9 @@ function sendEvent(data, queueName) {
 
   pushEventIdToDataLayer(data);
 
-  if (loadWasNotCalled) {
-    templateStorage.removeItem(asyncScriptLoadManagerStorageKey);
-    return data.gtmOnSuccess();
+  if (!asyncManager.hasPendingCalls()) {
+    asyncManager.clear();
+    return gtmOnSuccess();
   }
 }
 
@@ -568,27 +648,57 @@ function sendEvent(data, queueName) {
 ==============================================================================*/
 
 /**
- * The asyncScriptLoadManagerStorageKey helper object is used to handle multiple asynchronous script injections.
+ * The helper object is used to handle multiple asynchronous script injections.
  * It ensures that the tag execution status is reported only after all scripts have finished loading.
  */
-function setAsyncScriptLoadManager(data) {
-  const tagExecutionId = data.gtmTagId + '-' + data.gtmEventId + '-' + getTimestampMillis();
-  const asyncScriptLoadManagerStorageKey = 'asyncScriptLoadManager-' + tagExecutionId;
-  const asyncScriptLoadManager = {
-    pendingInjectScriptCalls: 0,
-    someFailed: false,
-    maybeCallTagExecutionHandler: () => {
-      const manager = templateStorage.getItem(asyncScriptLoadManagerStorageKey);
-      manager.pendingInjectScriptCalls--;
-      if (manager.pendingInjectScriptCalls === 0) {
-        templateStorage.removeItem(asyncScriptLoadManagerStorageKey);
-        return manager.someFailed ? data.gtmOnFailure() : data.gtmOnSuccess();
+function getAsyncScriptLoadManager(key) {
+  return {
+    key: key,
+    addPendingCall: () => {
+      const manager = templateStorage.getItem(key);
+      if (getType(manager) === 'object') {
+        manager.pendingInjectScriptCalls++;
+        templateStorage.setItem(key, manager);
       }
-      templateStorage.setItem(asyncScriptLoadManagerStorageKey, manager);
+    },
+    hasPendingCalls: () => {
+      const manager = templateStorage.getItem(key);
+      return getType(manager) === 'object' && manager.pendingInjectScriptCalls > 0;
+    },
+    markFailed: () => {
+      const manager = templateStorage.getItem(key);
+      if (getType(manager) === 'object') {
+        manager.someFailed = true;
+        templateStorage.setItem(key, manager);
+      }
+    },
+    completeCall: () => {
+      const manager = templateStorage.getItem(key);
+      if (getType(manager) === 'object') {
+        manager.pendingInjectScriptCalls--;
+        if (manager.pendingInjectScriptCalls <= 0) {
+          templateStorage.removeItem(key);
+          return manager.someFailed ? manager.onFailure() : manager.onSuccess();
+        }
+        templateStorage.setItem(key, manager);
+      }
+    },
+    clear: () => {
+      templateStorage.removeItem(key);
     }
   };
-  templateStorage.setItem(asyncScriptLoadManagerStorageKey, asyncScriptLoadManager);
-  return asyncScriptLoadManagerStorageKey;
+}
+
+function initAsyncScriptLoadManager(data) {
+  const tagExecutionId = data.gtmTagId + '-' + data.gtmEventId + '-' + getTimestampMillis();
+  const key = 'asyncScriptLoadManager-' + tagExecutionId;
+  templateStorage.setItem(key, {
+    pendingInjectScriptCalls: 0,
+    someFailed: false,
+    onSuccess: data.gtmOnSuccess,
+    onFailure: data.gtmOnFailure
+  });
+  return getAsyncScriptLoadManager(key);
 }
 
 function convertArgumentstoArray(args) {
