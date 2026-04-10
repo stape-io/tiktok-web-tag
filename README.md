@@ -55,10 +55,24 @@ When enabled, user data is stored in `localStorage` to persist across events and
 
 The tag provides robust support for privacy and compliance requirements:
 
--   **TikTok Consent Mode**: Configure the pixel to operate in an "opt-in" (waits for consent) or "opt-out" (fires until consent is revoked) mode.
+-   **TikTok Consent Mode**: Configure the pixel to operate in an **opt-in** (waits for consent before loading the SDK) or **opt-out** (fires until consent is explicitly revoked) mode.
 -   **Manual Consent**: Explicitly grant or deny consent for the pixel to fire.
--   **GTM Consent Mode**: The tag respects GTM's native consent signals, specifically checking for `ad_storage` consent.
+-   **GTM Consent Mode**: The tag respects GTM's native consent signals, specifically checking for `ad_storage` consent. When combined with opt-in mode, the SDK load is deferred until consent is granted via a consent listener.
 -   **Limited Data Use (LDU)**: Enable LDU for users in U.S. states with specific data privacy laws.
+
+#### Consent-Aware SDK Loading
+
+The tag gates TikTok SDK loading on consent status. When consent is denied, the tag exits early without loading the SDK or firing any network requests, rather than loading the SDK and relying solely on `revokeConsent` to suppress events. This means:
+
+-   **Opt-out mode**: If consent is denied (manually or via `ad_storage`), the tag returns immediately. No SDK script is injected and no pixel is initialized. If consent was previously granted and the SDK is already loaded, a `revokeConsent` command is issued to suppress further events.
+-   **Opt-in mode**: The SDK load is deferred until consent is explicitly granted. Events are queued in the shim (the lightweight queue created before the SDK loads) and only flushed once the SDK loads after consent is granted.
+-   **Google Consent Mode integration**: When `ad_storage` is initially denied, the SDK load is deferred via a consent listener. Once `ad_storage` is granted, the SDK loads and queued events are sent.
+
+This approach avoids unnecessary script loading, reduces page overhead when consent is withheld, and prevents the pixel from being marked as initialized before consent is verified.
+
+#### Storage Gating
+
+`localStorage` interactions (reading and writing Event User Data Enhancement) are also gated on consent. When consent has not been granted, the tag skips reading from and writing to `localStorage`, ensuring no user data is persisted without permission.
 
 ### Server-Side Deduplication
 
