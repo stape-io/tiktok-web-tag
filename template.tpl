@@ -26,7 +26,7 @@ ___INFO___
     "displayName": "stape.io",
     "thumbnail": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAlgAAAJYCAYAAAC+ZpjcAAAphElEQVR4Ae3dfazdd33Y8Y+fn0h8AxlPapLrZh0F4viyVWHjYTERUksDStJ/6kInO0JKB9KII7US1SrZaalAmrY4mQRTJWpnWhH/ORGlndYqdkSpRrViA9lG11I7SSsoCpKdNECeyM7nHN/k+vpe3/PwPef39HpJR8dxbgOirfzm+/n+Pr91EfFyADTMy//u5wKgrtYHAABFCSwAgMIEFgBAYQILAKAwgQUAUJjAAgAoTGABABQmsAAAChNYAACFCSwAgMIEFgBAYQILAKAwgQUAUJjAAgAoTGABABQmsAAAChNYAACFCSwAgMIEFgBAYQILAKAwgQUAUJjAAgAoTGABABQmsAAAChNYAACFCSwAgMIEFgBAYQILAKAwgQUAUJjAAgAoTGABABQmsAAAChNYAACFCSwAgMIEFgBAYQILAKAwgQUAUJjAAgAoTGABABQmsAAAChNYAACFCSwAgMIEFgBAYQILAKAwgQUAUJjAAgAoTGABABQmsAAAChNYAACFCSwAgMIEFgBAYQILAKAwgQUAUJjAAgAoTGABABQmsAAAChNYAACFCSwAgMIEFgBAYQILAKAwgQUAUJjAAgAoTGABABQmsAAAChNYAACFCSwAgMIEFgBAYQILAKAwgQUAUJjAAgAoTGABABQmsAAAChNYAACFCSwAgMIEFgBAYQILAKAwgQUAUJjAAgAoTGABABQmsAAAChNYAACFCSwAgMIEFgBAYQILAKAwgQUAUJjAAgAoTGABABQmsAAAChNYAACFCSwAgMIEFgBAYQILAKAwgQUAUJjAAgAoTGABABQmsAAAChNYAACFCSwAgMIEFgBAYQILAKAwgQUAUJjAAgAoTGABABQmsAAAChNYAACFCSwAgMIEFgBAYQILAKAwgQUAUJjAAgAoTGABABQmsAAAChNYAACFCSwAgMIEFgBAYQILAKAwgQUAUJjAAgAoTGABABQmsAAAChNYAACFCSwAgMIEFgBAYQILAKAwgQUAUJjAAgAoTGABABQmsAAAChNYAACFCSwAgMIEFgBAYQILAKAwgQUAUJjAAgAoTGABABQmsAAAChNYAACFCSwAgMIEFgBAYQILAKAwgQUAUJjAAgAoTGABABQmsAAAChNYAACFCSygkc4+83wA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\u003d"
   },
-  "description": "Tag that integrates TikTok Pixel into the page and allows easy tracking. Note: this tag does not require the Base Code installed as a Custom HTML tag to work.",
+  "description": "Tag that integrates TikTok Pixel into the page and allows easy tracking. ✅ Note: this tag does not require the Base Code installed as a Custom HTML tag to work.",
   "containerContexts": [
     "WEB"
   ]
@@ -274,48 +274,43 @@ ___TEMPLATE_PARAMETERS___
     "groupStyle": "ZIPPY_OPEN_ON_PARAM",
     "subParams": [
       {
-        "type": "GROUP",
-        "name": "tikTokConsentGroup",
-        "subParams": [
+        "type": "SELECT",
+        "name": "consentOptMode",
+        "displayName": "Default TikTok Consent Mode",
+        "macrosInSelect": false,
+        "selectItems": [
           {
-            "type": "SELECT",
-            "name": "consentOptMode",
-            "displayName": "Default TikTok Consent Mode",
-            "macrosInSelect": false,
-            "selectItems": [
-              {
-                "value": "optout",
-                "displayValue": "User Opt-out"
-              },
-              {
-                "value": "optin",
-                "displayValue": "User Opt-in"
-              }
-            ],
-            "simpleValueType": true,
-            "help": "\u003cb\u003eUser Opt-in\u003c/b\u003e: this solution will prevent pixels from sharing data with TikTok until user consent is explicitly granted. After consent is granted on the page, events that were previously queued in the page before consent was granted will be sent.\n\u003cbr/\u003e\u003cbr/\u003e\n\u003cb\u003eUser Opt-out\u003c/b\u003e: this solution will allow pixels to share data with TikTok until user consent is explicitly revoked. Events already sent to TikTok won\u0027t be affected.\n\u003cbr/\u003e\u003cbr/\u003e\n\u003ca href\u003d\"https://business-api.tiktok.com/portal/docs?id\u003d1795929012554754\"\u003eLearn more\u003c/a\u003e (note that the opt-in and opt-out definition is switched).",
-            "notSetText": "(not set)"
+            "value": "optout",
+            "displayValue": "User Opt-out"
           },
           {
-            "type": "SELECT",
-            "name": "consent",
-            "displayName": "Consent",
-            "macrosInSelect": true,
-            "selectItems": [
-              {
-                "value": "granted",
-                "displayValue": "granted"
-              },
-              {
-                "value": "denied",
-                "displayValue": "denied"
-              }
-            ],
-            "simpleValueType": true,
-            "help": "\u003cb\u003eConsent Granted\u003c/b\u003e accepted values: \u003ci\u003etrue\u003c/i\u003e, \u003ci\u003e\"true\"\u003c/i\u003e, \u003ci\u003e1\u003c/i\u003e, \u003ci\u003e\"1\"\u003c/i\u003e, or \u003ci\u003e\"granted\"\u003c/i\u003e.\n\u003cbr/\u003e\u003cbr/\u003e\n\u003cb\u003eConsent Denied\u003c/b\u003e accepted values: \u003ci\u003efalse\u003c/i\u003e, \u003ci\u003e\"false\"\u003c/i\u003e, \u003ci\u003e0\u003c/i\u003e, \u003ci\u003e\"0\"\u003c/i\u003e, or \u003ci\u003e\"denied\"\u003c/i\u003e.\n\u003cbr/\u003e\u003cbr/\u003e\nAny other value will be considered as \u003cb\u003eConsent Unknown\u003c/b\u003e.\n\u003cbr/\u003e\u003cbr/\u003e\nWhen \u003cb\u003eConsent Denied\u003c/b\u003e events won\u0027t be sent. The tracking resumes only when an event fires with \u003cb\u003eConsent Granted\u003c/b\u003e.\n\u003cbr/\u003e\u003cbr/\u003e\n\u003ca href\u003d\"https://business-api.tiktok.com/portal/docs?id\u003d1795929012554754\"\u003eLearn more\u003c/a\u003e.",
-            "notSetText": "(not set)"
+            "value": "optin",
+            "displayValue": "User Opt-in"
           }
         ],
+        "simpleValueType": true,
+        "help": "\u003cb\u003eUser Opt-in\u003c/b\u003e: this solution will prevent pixels from sharing data with TikTok until user consent is explicitly granted. After consent is granted on the page, events that were previously queued in the page before consent was granted will be sent.\n\u003cbr/\u003e\u003cbr/\u003e\n\u003cb\u003eUser Opt-out\u003c/b\u003e (default): this solution will allow pixels to share data with TikTok until user consent is explicitly revoked. Events already sent to TikTok won\u0027t be affected.\n\u003cbr/\u003e\u003cbr/\u003e\n\u003ca href\u003d\"https://business-api.tiktok.com/portal/docs?id\u003d1795929012554754\"\u003eLearn more\u003c/a\u003e (note that the opt-in and opt-out definition is switched).",
+        "defaultValue": "optout",
+        "alwaysInSummary": true
+      },
+      {
+        "type": "SELECT",
+        "name": "consent",
+        "displayName": "Consent",
+        "macrosInSelect": true,
+        "selectItems": [
+          {
+            "value": "granted",
+            "displayValue": "granted"
+          },
+          {
+            "value": "denied",
+            "displayValue": "denied"
+          }
+        ],
+        "simpleValueType": true,
+        "help": "\u003cb\u003eConsent Granted\u003c/b\u003e accepted values: \u003ci\u003etrue\u003c/i\u003e, \u003ci\u003e\"true\"\u003c/i\u003e, \u003ci\u003e1\u003c/i\u003e, \u003ci\u003e\"1\"\u003c/i\u003e, or \u003ci\u003e\"granted\"\u003c/i\u003e.\n\u003cbr/\u003e\u003cbr/\u003e\n\u003cb\u003eConsent Denied\u003c/b\u003e accepted values: \u003ci\u003efalse\u003c/i\u003e, \u003ci\u003e\"false\"\u003c/i\u003e, \u003ci\u003e0\u003c/i\u003e, \u003ci\u003e\"0\"\u003c/i\u003e, or \u003ci\u003e\"denied\"\u003c/i\u003e.\n\u003cbr/\u003e\u003cbr/\u003e\nAny other value will be considered as \u003cb\u003eConsent Unknown\u003c/b\u003e.\n\u003cbr/\u003e\u003cbr/\u003e\nWhen \u003cb\u003eConsent Denied\u003c/b\u003e, events won\u0027t be sent. The tracking resumes only when an event fires with \u003cb\u003eConsent Granted\u003c/b\u003e.\n\u003cbr/\u003e\u003cbr/\u003e\n\u003ca href\u003d\"https://business-api.tiktok.com/portal/docs?id\u003d1795929012554754\"\u003eLearn more\u003c/a\u003e.",
+        "notSetText": "(not set)",
         "enablingConditions": [
           {
             "paramName": "enableGoogleConsentMode",
@@ -329,7 +324,8 @@ ___TEMPLATE_PARAMETERS___
         "name": "enableGoogleConsentMode",
         "checkboxText": "Enable Google Consent Mode support",
         "simpleValueType": true,
-        "help": "When enabled, this tag checks for the Google Consent Mode \u003ci\u003ead_storage\u003c/i\u003e consent.\n\u003cbr/\u003e\nIf consent is not granted, the TikTok pixel consent is set as revoked. \n\u003cbr/\u003e\nIf consent is granted (initially or later), the pixel consent is automatically granted.\n\u003cbr/\u003e\u003cbr/\u003e\n\u003ca href\u003d\"https://business-api.tiktok.com/portal/docs?id\u003d1795929012554754\"\u003eLearn more\u003c/a\u003e (note that the opt-in and opt-out definition is switched)."
+        "help": "When enabled, this tag checks for the Google Consent Mode \u003ci\u003ead_storage\u003c/i\u003e consent.\n\u003cbr/\u003e\nIf consent is not granted, the TikTok pixel consent is set as revoked or on hold (check the \u003ci\u003eDefault TikTok Consent Mode\u003c/i\u003e above). \n\u003cbr/\u003e\nIf consent is granted (initially or later), the pixel consent is automatically granted.\n\u003cbr/\u003e\u003cbr/\u003e\n\u003ca href\u003d\"https://business-api.tiktok.com/portal/docs?id\u003d1795929012554754\"\u003eLearn more\u003c/a\u003e (note that the opt-in and opt-out definition is switched).",
+        "subParams": []
       },
       {
         "type": "CHECKBOX",
@@ -702,11 +698,41 @@ const setInWindow = require('setInWindow');
 const sha256 = require('sha256');
 const templateStorage = require('templateStorage');
 
+// Call-once methods.
+let gtmOnSuccess = () => {
+  gtmOnSuccess = () => {};
+  return data.gtmOnSuccess();
+};
+
+let gtmOnFailure = () => {
+  gtmOnFailure = () => {};
+  return data.gtmOnFailure();
+};
+
 /*==============================================================================
 ==============================================================================*/
 
+const PARTNER_NAME = 'stape_gtm_1_2_0';
 const queueName = 'ttq';
-getOrCreateTikTokQueue(queueName);
+
+const queue = getOrCreateTikTokQueue(queueName);
+
+const isConsentExplicitlyRevokedAndNotOptInMode =
+  data.consentOptMode !== 'optin' &&
+  (data.enableGoogleConsentMode
+    ? !isConsentGranted('ad_storage')
+    : isUIConsentFieldDenied(data.consent));
+if (isConsentExplicitlyRevokedAndNotOptInMode) {
+  // Only adds .revokeConsent if the queue was already taken over by SDK.
+  // Otherwise (not taken over yet), .track/.identify commands collect prior to consent granted will be executed when calling .load and .grantConsent.
+  const queueWasTakenOverBySDK = queue && (queue.initialize || queue._mounted);
+  if (queueWasTakenOverBySDK) {
+    callInWindow(queueName + '.revokeConsent');
+  }
+
+  return gtmOnSuccess();
+}
+
 setConsent(data, queueName);
 sendEvent(data, queueName);
 
@@ -727,7 +753,8 @@ function getOrCreateTikTokQueue(queueName) {
   // "pixelId" parameter is not present in the original method.
   // We need it to determine which queue to be used during the execution of the inner function.
   newQueue.setAndDefer = (queue, command, pixelId) => {
-    queue[command] = () => {
+    // Do not use arrow function here to avoid problems with 'arguments'.
+    queue[command] = function () {
       const currentQueue = copyFromWindow(queueName);
       const currentPixelQueue = pixelId
         ? (currentQueue._i[pixelId] = currentQueue._i[pixelId] || [])
@@ -767,31 +794,24 @@ function getOrCreateTikTokQueue(queueName) {
     _o[pixelId] = options || {};
     setInWindow(queueName + '._o', _o, true);
 
-    let asyncScriptLoadManager;
+    let asyncManager;
     if (
       getType(asyncScriptLoadManagerStorageConfig) === 'object' &&
-      asyncScriptLoadManagerStorageConfig.asyncScriptLoadManagerStorageKey
+      asyncScriptLoadManagerStorageConfig.key
     ) {
-      const asyncScriptLoadManagerStorageKey =
-        asyncScriptLoadManagerStorageConfig.asyncScriptLoadManagerStorageKey;
-      asyncScriptLoadManager = templateStorage.getItem(asyncScriptLoadManagerStorageKey);
-      if (getType(asyncScriptLoadManager) === 'object') {
-        asyncScriptLoadManager.pendingInjectScriptCalls += 1;
-        templateStorage.setItem(asyncScriptLoadManagerStorageKey, asyncScriptLoadManager);
-      }
+      asyncManager = getAsyncScriptLoadManager(asyncScriptLoadManagerStorageConfig.key);
+      asyncManager.addPendingCall();
     }
 
     injectScript(
       scriptUrl,
       () => {
-        if (getType(asyncScriptLoadManager) === 'object') {
-          asyncScriptLoadManager.maybeCallTagExecutionHandler();
-        }
+        if (asyncManager) asyncManager.completeCall();
       },
       () => {
-        if (getType(asyncScriptLoadManager) === 'object') {
-          asyncScriptLoadManager.someFailed = true;
-          asyncScriptLoadManager.maybeCallTagExecutionHandler();
+        if (asyncManager) {
+          asyncManager.markFailed();
+          asyncManager.completeCall();
         }
       },
       'ttqPixel-' + pixelId
@@ -799,29 +819,49 @@ function getOrCreateTikTokQueue(queueName) {
   };
 
   setInWindow(queueName, newQueue, true);
+  return newQueue;
+}
+
+function deferUntilGoogleConsentGranted(isConsentGranted, callback) {
+  if (isConsentGranted) {
+    callback();
+    return;
+  }
+
+  const callbacksKey = 'ttq_consent_callbacks_ad_storage';
+  const callbacks = templateStorage.getItem(callbacksKey) || [];
+  callbacks.push(callback);
+  templateStorage.setItem(callbacksKey, callbacks);
+
+  const listenerAddedKey = 'ttq_consent_listener_added_ad_storage';
+  if (!templateStorage.getItem(listenerAddedKey)) {
+    templateStorage.setItem(listenerAddedKey, true);
+    addConsentListener('ad_storage', (type, granted) => {
+      if (type !== 'ad_storage' || !granted) return;
+      const queuedCallbacks = templateStorage.getItem(callbacksKey) || [];
+      templateStorage.setItem(callbacksKey, []);
+      queuedCallbacks.forEach((cb) => cb());
+    });
+  }
 }
 
 function setConsent(data, queueName) {
   if (data.enableGoogleConsentMode) {
-    if (!isConsentGranted('ad_storage')) {
-      callInWindow(queueName + '.revokeConsent');
+    if (data.consentOptMode === 'optin' && !isTrackingPermitted(data)) {
+      callInWindow(queueName + '.holdConsent');
+    }
 
-      let wasCalled = false;
-      addConsentListener('ad_storage', (consentType, granted) => {
-        if (wasCalled || consentType !== 'ad_storage' || !granted) return;
-        wasCalled = true;
-        callInWindow(queueName + '.grantConsent');
-      });
+    deferUntilGoogleConsentGranted(isTrackingPermitted(data), () => {
+      callInWindow(queueName + '.grantConsent');
+    });
+  } else {
+    // Manual consent
+    if (!isTrackingPermitted(data)) {
+      callInWindow(queueName + '.holdConsent');
     } else {
       callInWindow(queueName + '.grantConsent');
     }
-
-    return;
   }
-
-  if (data.consentOptMode === 'optin') callInWindow(queueName + '.holdConsent');
-  if (isUIConsentFieldGranted(data.consent)) callInWindow(queueName + '.grantConsent');
-  else if (isUIConsentFieldDenied(data.consent)) callInWindow(queueName + '.revokeConsent');
 }
 
 function getLoadOptions(data) {
@@ -889,13 +929,13 @@ function pushEventIdToDataLayer(data) {
   });
 }
 
-function getEventUserDataEnhancement() {
-  if (localStorage) {
-    const gtmeec = localStorage.getItem('gtmeec-tt');
-    if (gtmeec) {
-      const gtmeecParsed = JSON.parse(gtmeec);
-      if (getType(gtmeecParsed) === 'object') return gtmeecParsed;
-    }
+function getEventUserDataEnhancement(canInteractWithStorage) {
+  if (!canInteractWithStorage || !localStorage) return {};
+
+  const gtmeec = localStorage.getItem('gtmeec-tt');
+  if (gtmeec) {
+    const gtmeecParsed = JSON.parse(gtmeec);
+    if (getType(gtmeecParsed) === 'object') return gtmeecParsed;
   }
 
   return {};
@@ -965,16 +1005,17 @@ function hashUserDataFields(userData, storeUserDataInLocalStorage) {
 }
 
 function storeUserDataInLocalStorage(userData) {
-  if (!objHasProps(userData)) return;
+  if (!localStorage || !objHasProps(userData)) return;
+
   const gtmeec = JSON.stringify(userData);
   localStorage.setItem('gtmeec-tt', gtmeec);
 }
 
-function storeEventUserDataEnhancement(data, userData) {
-  if (localStorage && objHasProps(userData)) {
-    if (!data.storeUserDataHashed) storeUserDataInLocalStorage(userData);
-    else hashUserDataFields(userData, storeUserDataInLocalStorage);
-  }
+function storeEventUserDataEnhancement(data, canInteractWithStorage, userData) {
+  if (!canInteractWithStorage || !localStorage || !objHasProps(userData)) return;
+
+  if (!data.storeUserDataHashed) storeUserDataInLocalStorage(userData);
+  else hashUserDataFields(userData, storeUserDataInLocalStorage);
 }
 
 function addUserData(userData, userDataFrom, useDL) {
@@ -982,7 +1023,6 @@ function addUserData(userData, userDataFrom, useDL) {
     userDataFrom.email ||
     userDataFrom.sha256_email_address ||
     userDataFrom.email_address ||
-    userDataFrom.email ||
     userDataFrom.em;
   const emailType = getType(email);
   if (emailType === 'array' || emailType === 'object') email = email[0];
@@ -1010,13 +1050,26 @@ function addUserData(userData, userDataFrom, useDL) {
   return userData;
 }
 
+function isTrackingPermitted(data) {
+  if (data.enableGoogleConsentMode) {
+    return isConsentGranted('ad_storage');
+  } else {
+    // Manual consent
+    return (
+      data.consentOptMode !== 'optin' ||
+      (data.consentOptMode === 'optin' && isUIConsentFieldGranted(data.consent))
+    );
+  }
+}
+
 function getUserData(data) {
   if (!data.enableAdvancedMatching) return;
 
+  const canInteractWithStorage = isTrackingPermitted(data);
   let userData = {};
 
   if (data.enableEventUserDataEnhancement) {
-    userData = getEventUserDataEnhancement();
+    userData = getEventUserDataEnhancement(canInteractWithStorage);
   }
 
   if (data.enableDataLayerMapping) {
@@ -1037,7 +1090,7 @@ function getUserData(data) {
   if (objIsEmptyOrContainsOnlyFalsyValues(userData)) return;
 
   if (data.enableEventUserDataEnhancement) {
-    storeEventUserDataEnhancement(data, userData);
+    storeEventUserDataEnhancement(data, canInteractWithStorage, userData);
   }
 
   return userData;
@@ -1165,7 +1218,7 @@ function addGA4EventParameters(eventName, eventParameters, ecommerce) {
 
 function getEventParameters(data, eventName) {
   const eventParameters = {
-    gtm_version: 'stape_gtm_1_0_1',
+    gtm_version: PARTNER_NAME,
     event_trigger_source: 'GoogleTagManagerClient'
   };
 
@@ -1192,40 +1245,63 @@ function getEventParameters(data, eventName) {
     mergeObj(eventParameters, makeTableMap(data.eventParametersList, 'name', 'value'));
   }
 
-  if (getType(data.eventCustomParametersFromVariable) === 'object') {
-    mergeObj(eventParameters, data.eventCustomParametersFromVariable);
+  if (getType(data.additionalEventParametersFromVariable) === 'object') {
+    mergeObj(eventParameters, data.additionalEventParametersFromVariable);
   }
 
-  if (data.eventCustomParametersList && data.eventCustomParametersList.length) {
-    mergeObj(eventParameters, makeTableMap(data.eventCustomParametersList, 'name', 'value'));
+  if (data.additionalEventParametersList && data.additionalEventParametersList.length) {
+    mergeObj(eventParameters, makeTableMap(data.additionalEventParametersList, 'name', 'value'));
   }
 
   return eventParameters;
 }
 
 function sendEvent(data, queueName) {
-  const pixelIds = getType(data.pixelIds) === 'string' ? data.pixelIds.split(',') : data.pixelIds;
-  if (getType(pixelIds) !== 'array' || pixelIds.length === 0) return data.gtmOnFailure();
+  let pixelIds = getType(data.pixelIds) === 'string' ? data.pixelIds.split(',') : data.pixelIds;
+  if (getType(pixelIds) === 'array') {
+    pixelIds = pixelIds.map((p) => makeString(p).trim()).filter((p) => p);
+  }
+  if (getType(pixelIds) !== 'array' || pixelIds.length === 0) return gtmOnFailure();
 
   const initializedPixelIds = copyFromWindow('_tiktok_gtm_ids') || {};
-  let loadWasNotCalled = true;
   const loadOptions = getLoadOptions(data);
   const userData = getUserData(data);
   let identifyWasNotCalled = true;
   const eventName = getEventName(data);
   const eventParameters = getEventParameters(data, eventName);
 
-  const asyncScriptLoadManagerStorageKey = setAsyncScriptLoadManager(data);
+  const asyncManager = initAsyncScriptLoadManager(data);
 
   pixelIds.forEach((pixelId) => {
     const pixelIdIsNotInitialized = !initializedPixelIds[pixelId];
+
     if (pixelIdIsNotInitialized) {
-      initializedPixelIds[pixelId] = true;
-      loadWasNotCalled = false;
-      setInWindow('_tiktok_gtm_ids', initializedPixelIds, true);
-      callInWindow(queueName + '.load', pixelId, loadOptions, {
-        asyncScriptLoadManagerStorageKey: asyncScriptLoadManagerStorageKey
-      });
+      const loadPixel = () => {
+        const asyncScriptLoadManagerStorageConfig = {
+          key: asyncManager.key
+        };
+        callInWindow(
+          queueName + '.load',
+          pixelId,
+          loadOptions,
+          asyncScriptLoadManagerStorageConfig
+        );
+      };
+
+      let willLoad = false;
+      if (data.enableGoogleConsentMode) {
+        willLoad = true;
+        deferUntilGoogleConsentGranted(isTrackingPermitted(data), () => loadPixel());
+      } else if (isTrackingPermitted(data)) {
+        // Manual consent
+        willLoad = true;
+        loadPixel();
+      }
+
+      if (willLoad) {
+        initializedPixelIds[pixelId] = true;
+        setInWindow('_tiktok_gtm_ids', initializedPixelIds, true);
+      }
     }
 
     if (identifyWasNotCalled && objHasProps(userData)) {
@@ -1241,9 +1317,9 @@ function sendEvent(data, queueName) {
 
   pushEventIdToDataLayer(data);
 
-  if (loadWasNotCalled) {
-    templateStorage.removeItem(asyncScriptLoadManagerStorageKey);
-    return data.gtmOnSuccess();
+  if (!asyncManager.hasPendingCalls()) {
+    asyncManager.clear();
+    return gtmOnSuccess();
   }
 }
 
@@ -1252,27 +1328,57 @@ function sendEvent(data, queueName) {
 ==============================================================================*/
 
 /**
- * The asyncScriptLoadManagerStorageKey helper object is used to handle multiple asynchronous script injections.
+ * The helper object is used to handle multiple asynchronous script injections.
  * It ensures that the tag execution status is reported only after all scripts have finished loading.
  */
-function setAsyncScriptLoadManager(data) {
-  const tagExecutionId = data.gtmTagId + '-' + data.gtmEventId + '-' + getTimestampMillis();
-  const asyncScriptLoadManagerStorageKey = 'asyncScriptLoadManager-' + tagExecutionId;
-  const asyncScriptLoadManager = {
-    pendingInjectScriptCalls: 0,
-    someFailed: false,
-    maybeCallTagExecutionHandler: () => {
-      const manager = templateStorage.getItem(asyncScriptLoadManagerStorageKey);
-      manager.pendingInjectScriptCalls--;
-      if (manager.pendingInjectScriptCalls === 0) {
-        templateStorage.removeItem(asyncScriptLoadManagerStorageKey);
-        return manager.someFailed ? data.gtmOnFailure() : data.gtmOnSuccess();
+function getAsyncScriptLoadManager(key) {
+  return {
+    key: key,
+    addPendingCall: () => {
+      const manager = templateStorage.getItem(key);
+      if (getType(manager) === 'object') {
+        manager.pendingInjectScriptCalls++;
+        templateStorage.setItem(key, manager);
       }
-      templateStorage.setItem(asyncScriptLoadManagerStorageKey, manager);
+    },
+    hasPendingCalls: () => {
+      const manager = templateStorage.getItem(key);
+      return getType(manager) === 'object' && manager.pendingInjectScriptCalls > 0;
+    },
+    markFailed: () => {
+      const manager = templateStorage.getItem(key);
+      if (getType(manager) === 'object') {
+        manager.someFailed = true;
+        templateStorage.setItem(key, manager);
+      }
+    },
+    completeCall: () => {
+      const manager = templateStorage.getItem(key);
+      if (getType(manager) === 'object') {
+        manager.pendingInjectScriptCalls--;
+        if (manager.pendingInjectScriptCalls <= 0) {
+          templateStorage.removeItem(key);
+          return manager.someFailed ? manager.onFailure() : manager.onSuccess();
+        }
+        templateStorage.setItem(key, manager);
+      }
+    },
+    clear: () => {
+      templateStorage.removeItem(key);
     }
   };
-  templateStorage.setItem(asyncScriptLoadManagerStorageKey, asyncScriptLoadManager);
-  return asyncScriptLoadManagerStorageKey;
+}
+
+function initAsyncScriptLoadManager(data) {
+  const tagExecutionId = data.gtmTagId + '-' + data.gtmEventId + '-' + getTimestampMillis();
+  const key = 'asyncScriptLoadManager-' + tagExecutionId;
+  templateStorage.setItem(key, {
+    pendingInjectScriptCalls: 0,
+    someFailed: false,
+    onSuccess: data.gtmOnSuccess,
+    onFailure: data.gtmOnFailure
+  });
+  return getAsyncScriptLoadManager(key);
 }
 
 function convertArgumentstoArray(args) {
@@ -2083,10 +2189,707 @@ ___WEB_PERMISSIONS___
 
 ___TESTS___
 
-scenarios: []
+scenarios:
+- name: '[Happy Path] Pageview fires load, track and injects script'
+  code: |-
+    runCode(mockData);
+
+    // Verify TiktokAnalyticsObject definition
+    assertThat(windowData.TiktokAnalyticsObject).isEqualTo('ttq');
+
+    // Verify ttq internal state was populated successfully inside load
+    assertThat(getType(windowData.ttq._i)).isEqualTo('object');
+    assertThat(windowData.ttq._i['PIXEL123']._u).isEqualTo('https://analytics.tiktok.com/i18n/pixel/events.js');
+    assertThat(getType(windowData.ttq._t['PIXEL123'])).isEqualTo('number');
+    assertThat(getType(windowData.ttq._o['PIXEL123'])).isEqualTo('object');
+
+    const loadCalls = callInWindowCalls.filter((c) => c[0] === 'ttq.load');
+    assertThat(loadCalls.length).isEqualTo(1);
+    assertThat(loadCalls[0][1]).isEqualTo('PIXEL123');
+
+    const trackCalls = callInWindowCalls.filter((c) => c[0] === 'ttq.track');
+    assertThat(trackCalls.length).isEqualTo(1);
+    assertThat(trackCalls[0][1]).isEqualTo('Pageview');
+    assertThat(trackCalls[0][2].gtm_version).isEqualTo('stape_gtm_1_2_0');
+    assertThat(trackCalls[0][2].event_trigger_source).isEqualTo('GoogleTagManagerClient');
+    assertThat(trackCalls[0][3].pixel_code).isEqualTo('PIXEL123');
+
+    assertThat(injectScriptCalls.length).isEqualTo(1);
+    assertThat(injectScriptCalls[0].url).contains('analytics.tiktok.com');
+    assertThat(injectScriptCalls[0].url).contains('sdkid=PIXEL123');
+    assertThat(injectScriptCalls[0].url).contains('lib=ttq');
+    assertThat(injectScriptCalls[0].cacheToken).isEqualTo('ttqPixel-PIXEL123');
+
+    assertApi('gtmOnSuccess').wasCalled();
+    assertApi('gtmOnFailure').wasNotCalled();
+- name: '[Multiple Pixels] Each pixel gets separate load and track calls'
+  code: |-
+    mockData.pixelIds = 'AAA,BBB,CCC';
+
+    runCode(mockData);
+
+    const loadCalls = callInWindowCalls.filter((c) => c[0] === 'ttq.load');
+    assertThat(loadCalls.length).isEqualTo(3);
+    assertThat(loadCalls[0][1]).isEqualTo('AAA');
+    assertThat(loadCalls[1][1]).isEqualTo('BBB');
+    assertThat(loadCalls[2][1]).isEqualTo('CCC');
+
+    const trackCalls = callInWindowCalls.filter((c) => c[0] === 'ttq.track');
+    assertThat(trackCalls.length).isEqualTo(3);
+    assertThat(trackCalls[0][3].pixel_code).isEqualTo('AAA');
+    assertThat(trackCalls[1][3].pixel_code).isEqualTo('BBB');
+    assertThat(trackCalls[2][3].pixel_code).isEqualTo('CCC');
+
+    assertApi('gtmOnSuccess').wasCalled();
+    assertApi('gtmOnFailure').wasNotCalled();
+- name: '[Pixel Init] Already initialized pixel skips re-load but still tracks'
+  code: |-
+    mock('copyFromWindow', (key) => {
+      if (key === 'ttq') return {};
+      if (key === '_tiktok_gtm_ids') return { 'PIXEL123': true };
+      return undefined;
+    });
+
+    runCode(mockData);
+
+    const loadCalls = callInWindowCalls.filter((c) => c[0] === 'ttq.load');
+    assertThat(loadCalls.length).isEqualTo(0);
+
+    const trackCalls = callInWindowCalls.filter((c) => c[0] === 'ttq.track');
+    assertThat(trackCalls.length).isEqualTo(1);
+
+    assertApi('gtmOnSuccess').wasCalled();
+    assertApi('gtmOnFailure').wasNotCalled();
+- name: '[Consent] Manual consent evaluates granted/denied/modes'
+  code: |-
+    [
+      { value: true, action: 'grantConsent', expectLoad: true },
+      { value: 'granted', action: 'grantConsent', expectLoad: true },
+      { value: false, earlyExit: true },
+      { value: 'denied', earlyExit: true },
+      { value: undefined, action: 'grantConsent', expectLoad: true },
+      { optMode: 'optin', value: undefined, action: 'holdConsent', expectLoad: false },
+      { optMode: 'optin', value: true, action: 'grantConsent', expectLoad: true },
+      { optMode: 'optout', value: 'denied', earlyExit: true }
+    ].forEach((scenario) => {
+      callInWindowCalls = [];
+      injectScriptCalls = [];
+      windowData = {};
+      templateStorageData = {};
+
+      const testData = assign(assign({}, mockData), {
+        consent: scenario.value
+      });
+      if (scenario.optMode) {
+        testData.consentOptMode = scenario.optMode;
+      }
+
+      mock('injectScript', (url, onsuccess) => {
+        injectScriptCalls.push({ url: url });
+        onsuccess();
+      });
+
+      runCode(testData);
+
+      if (scenario.earlyExit) {
+        assertThat(callInWindowCalls.length).isEqualTo(0);
+      } else {
+        const actionCalls = callInWindowCalls.filter((c) => c[0] === 'ttq.' + scenario.action);
+        assertThat(actionCalls.length).isEqualTo(1);
+
+        const loadCalls = callInWindowCalls.filter((c) => c[0] === 'ttq.load');
+        if (scenario.expectLoad) {
+          assertThat(loadCalls.length).isEqualTo(1);
+        } else {
+          assertThat(loadCalls.length).isEqualTo(0);
+        }
+      }
+
+      assertApi('gtmOnSuccess').wasCalled();
+      assertApi('gtmOnFailure').wasNotCalled();
+    });
+- name: '[Consent] GTM consent mode behavior'
+  code: |-
+    [
+      { isGranted: false, earlyExit: true },
+      { isGranted: false, optMode: 'optin', expectAction: 'holdConsent', expectLoad: false, expectListener: true },
+      { isGranted: true, expectAction: 'grantConsent', expectLoad: true, expectListener: false },
+      { isGranted: true, optMode: 'optin', expectAction: 'grantConsent', expectLoad: true, expectListener: false }
+    ].forEach((scenario) => {
+      callInWindowCalls = [];
+      injectScriptCalls = [];
+      windowData = {};
+      templateStorageData = {};
+
+      const testData = assign(assign({}, mockData), {
+        enableGoogleConsentMode: true
+      });
+      if (scenario.optMode) {
+        testData.consentOptMode = scenario.optMode;
+      }
+
+      mock('isConsentGranted', () => scenario.isGranted);
+
+      let listenerCalled = false;
+      mock('addConsentListener', () => { listenerCalled = true; });
+
+      mock('injectScript', (url, onsuccess) => {
+        injectScriptCalls.push({ url: url });
+        onsuccess();
+      });
+
+      runCode(testData);
+
+      if (scenario.earlyExit) {
+        assertThat(callInWindowCalls.length).isEqualTo(0);
+      } else {
+        const actionCalls = callInWindowCalls.filter((c) => c[0] === 'ttq.' + scenario.expectAction);
+        assertThat(actionCalls.length).isEqualTo(1);
+
+        const loadCalls = callInWindowCalls.filter((c) => c[0] === 'ttq.load');
+        if (scenario.expectLoad) {
+          assertThat(loadCalls.length).isEqualTo(1);
+        } else {
+          assertThat(loadCalls.length).isEqualTo(0);
+        }
+
+        if (scenario.expectListener) {
+          assertThat(listenerCalled).isTrue();
+        }
+      }
+
+      assertApi('gtmOnSuccess').wasCalled();
+      assertApi('gtmOnFailure').wasNotCalled();
+    });
+- name: '[Consent] Listener fires queued callbacks when consent is later granted'
+  code: |-
+    mockData.enableGoogleConsentMode = true;
+    mockData.consentOptMode = 'optin';
+    mock('isConsentGranted', () => false);
+
+    let consentListenerCallback;
+    mock('addConsentListener', (type, callback) => {
+      consentListenerCallback = callback;
+    });
+
+    runCode(mockData);
+
+    const loadCallsBefore = callInWindowCalls.filter((c) => c[0] === 'ttq.load');
+    assertThat(loadCallsBefore.length).isEqualTo(0);
+
+    assertApi('gtmOnSuccess').wasCalled();
+    assertApi('gtmOnFailure').wasNotCalled();
+
+    consentListenerCallback('ad_storage', true);
+
+    const grantCalls = callInWindowCalls.filter((c) => c[0] === 'ttq.grantConsent');
+    assertThat(grantCalls.length).isGreaterThan(0);
+
+    const loadCallsAfter = callInWindowCalls.filter((c) => c[0] === 'ttq.load');
+    assertThat(loadCallsAfter.length).isEqualTo(1);
+- name: '[Event Name] Resolves inherited and overridden event names'
+  code: |-
+    [
+      { method: 'inherit', dlEvent: 'page_view', expected: 'Pageview' },
+      { method: 'inherit', dlEvent: 'purchase', expected: 'Purchase' },
+      { method: 'inherit', dlEvent: 'page_view_stape', expected: 'Pageview' },
+      { method: 'inherit', dlEvent: 'gtm4wp.productClickEEC', expected: 'ViewContent' },
+      { method: 'inherit', dlEvent: 'my_custom_dl_event', expected: 'my_custom_dl_event' },
+      { method: 'override', eventName: 'standard', eventNameStandard: 'AddToCart', expected: 'AddToCart' },
+      { method: 'override', eventName: 'custom', eventNameCustom: 'MyCustomEvent', expected: 'MyCustomEvent' }
+    ].forEach((scenario) => {
+      callInWindowCalls = [];
+      injectScriptCalls = [];
+
+      const testData = assign(assign({}, mockData), {
+        eventNameSetupMethod: scenario.method
+      });
+      if (scenario.eventName) testData.eventName = scenario.eventName;
+      if (scenario.eventNameStandard) testData.eventNameStandard = scenario.eventNameStandard;
+      if (scenario.eventNameCustom) testData.eventNameCustom = scenario.eventNameCustom;
+
+      mock('copyFromDataLayer', (key) => {
+        if (key === 'event') return scenario.dlEvent;
+        return undefined;
+      });
+
+      mock('injectScript', (url, onsuccess) => {
+        injectScriptCalls.push({ url: url });
+        onsuccess();
+      });
+
+      runCode(testData);
+
+      const trackCalls = callInWindowCalls.filter((c) => c[0] === 'ttq.track');
+      assertThat(trackCalls.length).isEqualTo(1);
+      assertThat(trackCalls[0][1]).isEqualTo(scenario.expected);
+
+      assertApi('gtmOnSuccess').wasCalled();
+      assertApi('gtmOnFailure').wasNotCalled();
+    });
+- name: '[User Data] Evaluates variables, arrays and tables'
+  code: |-
+    [
+      { desc: 'simple values', ud: { email: 'test@example.com', phone: '+1234567890' }, expectEmail: 'test@example.com', expectPhone: '+1234567890', list: [{ name: 'external_id', value: 'ext123' }], expectExt: 'ext123' },
+      { desc: 'array values', ud: { email: ['first@example.com', 'second@example.com'], phone: ['+111', '+222'] }, expectEmail: 'first@example.com', expectPhone: '+111' }
+    ].forEach((scenario) => {
+      callInWindowCalls = [];
+      const testData = assign(assign({}, mockData), {
+        enableAdvancedMatching: true,
+        userDataFromVariable: scenario.ud
+      });
+      if (scenario.list) testData.userDataList = scenario.list;
+
+      runCode(testData);
+
+      const identifyCalls = callInWindowCalls.filter((c) => c[0] === 'ttq.identify');
+      assertThat(identifyCalls.length).isEqualTo(1);
+      const userData = identifyCalls[0][1];
+      assertThat(userData.email).isEqualTo(scenario.expectEmail);
+      assertThat(userData.phone_number).isEqualTo(scenario.expectPhone);
+      if (scenario.expectExt) {
+        assertThat(userData.external_id).isEqualTo(scenario.expectExt);
+      }
+      assertApi('gtmOnSuccess').wasCalled();
+      assertApi('gtmOnFailure').wasNotCalled();
+    });
+- name: '[User Data] Parses user data and external ID from DataLayer'
+  code: "[\n  { desc: 'user_data object', dlKey: 'user_data', dlValue: { email: 'dl@example.com',\
+    \ phone: '+1555000000', external_id: 'ext123' }, expectExt: 'ext123', expectEmail:\
+    \ 'dl@example.com', expectPhone: '+1555000000' },\n  { desc: 'dl external_id',\
+    \ dlKey: 'external_id', dlValue: 'ext-dl', expectExt: 'ext-dl' },\n  { desc: 'dl\
+    \ user_id', dlKey: 'user_id', dlValue: 'uid-dl', expectExt: 'uid-dl' },\n  { desc:\
+    \ 'dl userId', dlKey: 'userId', dlValue: 'userId-dl', expectExt: 'userId-dl' }\n\
+    ].forEach((scenario) => {\n  callInWindowCalls = [];\n  injectScriptCalls = [];\n\
+    \n  const testData = assign(assign({}, mockData), {\n    enableAdvancedMatching:\
+    \ true,\n    enableDataLayerMapping: true\n  });\n\n  if (scenario.dlKey !== 'user_data')\
+    \ {\n    testData.userDataFromVariable = { email: 'test@example.com' };\n  }\n\
+    \n  mock('copyFromDataLayer', (key) => {\n    if (scenario.dlKey !== 'user_data'\
+    \ && key === 'user_data') {\n      return { email: 'test@example.com' };\n   \
+    \ }\n    if (key === scenario.dlKey) {\n      return scenario.dlValue;\n    }\n\
+    \    return undefined;\n  });\n\n  mock('injectScript', (url, onsuccess) => {\n\
+    \    injectScriptCalls.push({ url: url });\n    onsuccess();\n  });\n\n  runCode(testData);\n\
+    \n  const identifyCalls = callInWindowCalls.filter((c) => c[0] === 'ttq.identify');\n\
+    \  assertThat(identifyCalls.length).isEqualTo(1);\n  \n  const userData = identifyCalls[0][1];\n\
+    \  if (scenario.expectEmail) assertThat(userData.email).isEqualTo(scenario.expectEmail);\n\
+    \  if (scenario.expectPhone) assertThat(userData.phone_number).isEqualTo(scenario.expectPhone);\n\
+    \  if (scenario.expectExt) assertThat(userData.external_id).isEqualTo(scenario.expectExt);\n\
+    \n  assertApi('gtmOnSuccess').wasCalled();\n  assertApi('gtmOnFailure').wasNotCalled();\n\
+    });"
+- name: '[User Data] Empty, falsy or disabled skips identify call'
+  code: |-
+    [
+      { desc: 'empty object', ud: {}, am: true },
+      { desc: 'all-falsy values', ud: { email: '', phone: null }, am: true },
+      { desc: 'disabled am', ud: { email: 'test@example.com' }, am: false }
+    ].forEach((scenario) => {
+      callInWindowCalls = [];
+      const testData = assign(assign({}, mockData), {
+        enableAdvancedMatching: scenario.am,
+        userDataFromVariable: scenario.ud
+      });
+
+      runCode(testData);
+
+      const identifyCalls = callInWindowCalls.filter((c) => c[0] === 'ttq.identify');
+      assertThat(identifyCalls.length).isEqualTo(0);
+
+      assertApi('gtmOnSuccess').wasCalled();
+      assertApi('gtmOnFailure').wasNotCalled();
+    });
+- name: '[Event Data] GA4 Purchase with multiple items builds correct properties'
+  code: |-
+    const testData = assign(assign({}, mockData), {
+      eventNameStandard: 'Purchase',
+      enableDataLayerMapping: true
+    });
+
+    mock('copyFromDataLayer', (key) => {
+      if (key === 'items') return [
+        { item_id: 'SKU1', item_name: 'Product 1', price: 10, quantity: 2, currency: 'EUR' },
+        { item_id: 'SKU2', item_name: 'Product 2', price: 25, quantity: 1 }
+      ];
+      if (key === 'value') return 45;
+      if (key === 'currency') return 'EUR';
+      if (key === 'transaction_id') return 'TXN-001';
+      return undefined;
+    });
+
+    runCode(testData);
+
+    const trackCalls = callInWindowCalls.filter((c) => c[0] === 'ttq.track');
+    assertThat(trackCalls.length).isEqualTo(1);
+
+    const eventData = trackCalls[0][2];
+    assertThat(eventData.content_type).isEqualTo('product');
+    assertThat(eventData.content_ids).isEqualTo(['SKU1', 'SKU2']);
+    assertThat(eventData.contents.length).isEqualTo(2);
+    assertThat(eventData.contents[0].content_id).isEqualTo('SKU1');
+    assertThat(eventData.contents[0].quantity).isEqualTo(2);
+    assertThat(eventData.contents[1].content_id).isEqualTo('SKU2');
+    assertThat(eventData.contents[1].quantity).isEqualTo(1);
+    assertThat(eventData.value).isEqualTo(45);
+    assertThat(eventData.currency).isEqualTo('EUR');
+    assertThat(eventData.order_id).isEqualTo('TXN-001');
+    assertThat(eventData.num_items).isDefined();
+
+    assertApi('gtmOnSuccess').wasCalled();
+    assertApi('gtmOnFailure').wasNotCalled();
+- name: '[Event Data] GA4 single item includes content_name and content_category'
+  code: |-
+    const testData = assign(assign({}, mockData), {
+      eventNameStandard: 'ViewContent',
+      enableDataLayerMapping: true
+    });
+
+    mock('copyFromDataLayer', (key) => {
+      if (key === 'items') return [
+        { item_id: 'SINGLE1', item_name: 'My Product', item_category: 'Electronics', price: 99, quantity: 1 }
+      ];
+      return undefined;
+    });
+
+    runCode(testData);
+
+    const trackCalls = callInWindowCalls.filter((c) => c[0] === 'ttq.track');
+    const eventData = trackCalls[0][2];
+    assertThat(eventData.contents[0].content_name).isEqualTo('My Product');
+    assertThat(eventData.contents[0].content_category).isEqualTo('Electronics');
+    assertThat(eventData.content_type).isEqualTo('product');
+
+    assertApi('gtmOnSuccess').wasCalled();
+    assertApi('gtmOnFailure').wasNotCalled();
+- name: '[Event Data] UA Purchase with products builds correct properties'
+  code: |-
+    const testData = assign(assign({}, mockData), {
+      eventNameStandard: 'Purchase',
+      enableDataLayerMapping: true
+    });
+
+    mock('copyFromDataLayer', (key) => {
+      if (key === 'ecommerce') return {
+        currencyCode: 'GBP',
+        purchase: {
+          products: [
+            { id: 'P1', price: '15.99', quantity: '3' },
+            { id: 'P2', price: '8.50', quantity: '1' }
+          ]
+        }
+      };
+      return undefined;
+    });
+
+    runCode(testData);
+
+    const trackCalls = callInWindowCalls.filter((c) => c[0] === 'ttq.track');
+    assertThat(trackCalls.length).isEqualTo(1);
+
+    const eventData = trackCalls[0][2];
+    assertThat(eventData.content_type).isEqualTo('product');
+    assertThat(eventData.content_ids).isEqualTo(['P1', 'P2']);
+    assertThat(eventData.currency).isEqualTo('GBP');
+    assertThat(eventData.contents.length).isEqualTo(2);
+    assertThat(eventData.num_items).isDefined();
+
+    assertApi('gtmOnSuccess').wasCalled();
+    assertApi('gtmOnFailure').wasNotCalled();
+- name: '[Event Data] Parameters and additional parameters merge correctly'
+  code: |-
+    [
+      { type: 'standard', varKey: 'eventParametersFromVariable', listKey: 'eventParametersList', ud: { content_name: 'My Product', value: 99 }, list: [{ name: 'currency', value: 'USD' }, { name: 'content_type', value: 'product' }], expectName: 'My Product', expectValue: 99, expectCurrency: 'USD', expectContentType: 'product' },
+      { type: 'additional', varKey: 'additionalEventParametersFromVariable', listKey: 'additionalEventParametersList', ud: { custom_param: 'foo' }, list: [{ name: 'another_param', value: 'bar' }], expectCustom: 'foo', expectAnother: 'bar' }
+    ].forEach((scenario) => {
+      callInWindowCalls = [];
+      const testData = assign({}, mockData);
+      testData[scenario.varKey] = scenario.ud;
+      testData[scenario.listKey] = scenario.list;
+
+      if (scenario.type === 'standard') {
+         testData.eventNameStandard = 'Search';
+         testData.enableDataLayerMapping = true;
+         mock('copyFromDataLayer', (key) => key === 'search_term' ? 'blue shoes' : undefined);
+      } else {
+         mock('copyFromDataLayer', () => undefined);
+      }
+
+      runCode(testData);
+
+      const trackCalls = callInWindowCalls.filter((c) => c[0] === 'ttq.track');
+      const eventData = trackCalls[0][2];
+
+      if (scenario.type === 'standard') {
+        assertThat(eventData.content_name).isEqualTo(scenario.expectName);
+        assertThat(eventData.value).isEqualTo(scenario.expectValue);
+        assertThat(eventData.currency).isEqualTo(scenario.expectCurrency);
+        assertThat(eventData.content_type).isEqualTo(scenario.expectContentType);
+        assertThat(eventData.search_string).isEqualTo('blue shoes');
+      } else {
+        assertThat(eventData.custom_param).isEqualTo(scenario.expectCustom);
+        assertThat(eventData.another_param).isEqualTo(scenario.expectAnother);
+      }
+      assertApi('gtmOnSuccess').wasCalled();
+      assertApi('gtmOnFailure').wasNotCalled();
+    });
+- name: '[Event ID] Passes event_id in track call options'
+  code: |-
+    mockData.eventId = 'evt-abc-123';
+
+    runCode(mockData);
+
+    const trackCalls = callInWindowCalls.filter((c) => c[0] === 'ttq.track');
+    assertThat(trackCalls.length).isEqualTo(1);
+    assertThat(trackCalls[0][3].event_id).isEqualTo('evt-abc-123');
+
+    assertApi('gtmOnSuccess').wasCalled();
+    assertApi('gtmOnFailure').wasNotCalled();
+- name: '[DataLayer Push] Pushes event with custom and default settings'
+  code: |-
+    [
+      {
+        desc: 'custom name and layer',
+        eventIdDataLayerEventName: 'tt_pageview',
+        eventIdDataLayerVariableName: 'myDataLayer',
+        eventId: 'evt-123',
+        expectedLayer: 'myDataLayer',
+        expectedEvent: 'tt_pageview'
+      },
+      {
+        desc: 'defaults when not specified',
+        eventIdDataLayerEventName: undefined,
+        eventIdDataLayerVariableName: undefined,
+        eventId: 'evt-456',
+        expectedLayer: 'dataLayer',
+        expectedEvent: 'tiktokPixelDataLayerPush'
+      }
+    ].forEach((scenario) => {
+      createQueueItems = [];
+      const testData = assign(assign({}, mockData), {
+        pushEventIdToDataLayer: true,
+        eventIdDataLayerEventName: scenario.eventIdDataLayerEventName,
+        eventIdDataLayerVariableName: scenario.eventIdDataLayerVariableName,
+        eventId: scenario.eventId
+      });
+
+      runCode(testData);
+
+      const dlPushes = createQueueItems.filter((c) => c[0] === scenario.expectedLayer);
+      assertThat(dlPushes.length).isEqualTo(1);
+      assertThat(dlPushes[0][1].event).isEqualTo(scenario.expectedEvent);
+      assertThat(dlPushes[0][1].eventId).isEqualTo(scenario.eventId);
+
+      assertApi('gtmOnSuccess').wasCalled();
+      assertApi('gtmOnFailure').wasNotCalled();
+    });
+- name: '[Scripts] Script load failure calls gtmOnFailure'
+  code: "// callLater is used to simulate the async calling of onFailure.\n\nmock('injectScript',\
+    \ (url, onsuccess, onfailure) => {\n  injectScriptCalls.push({ url: url });\n\
+    \  callLater(() => { onfailure(); }); \n  onfailure();\n});\n\nrunCode(mockData);\n\
+    \ncallLater(() => {\n  assertApi('gtmOnSuccess').wasNotCalled();\n  assertApi('gtmOnFailure').wasCalled();\n\
+    });\n"
+- name: '[Settings] Passes limited_data_use correctly based on modeLDU'
+  code: |-
+    [
+      { mode: 'all', expectLoadLDU: true, expectTrackLDU: undefined },
+      { mode: 'single', expectLoadLDU: undefined, expectTrackLDU: true }
+    ].forEach((scenario) => {
+      callInWindowCalls = [];
+      const testData = assign(assign({}, mockData), {
+        enableLDU: true,
+        modeLDU: scenario.mode
+      });
+
+      runCode(testData);
+
+      const loadCalls = callInWindowCalls.filter((c) => c[0] === 'ttq.load');
+      const trackCalls = callInWindowCalls.filter((c) => c[0] === 'ttq.track');
+
+      if (scenario.expectLoadLDU) {
+        assertThat(loadCalls.length).isEqualTo(1);
+        assertThat(loadCalls[0][2].limited_data_use).isTrue();
+      }
+      if (scenario.expectTrackLDU) {
+        assertThat(trackCalls.length).isEqualTo(1);
+        assertThat(trackCalls[0][2].limited_data_use).isTrue();
+      }
+
+      assertApi('gtmOnSuccess').wasCalled();
+      assertApi('gtmOnFailure').wasNotCalled();
+    });
+- name: '[Settings] disableHistoryObserver passes historyObserver false in load options'
+  code: |-
+    mockData.disableHistoryObserver = true;
+
+    runCode(mockData);
+
+    const loadCalls = callInWindowCalls.filter((c) => c[0] === 'ttq.load');
+    assertThat(loadCalls.length).isEqualTo(1);
+    assertThat(loadCalls[0][2].historyObserver).isFalse();
+
+    assertApi('gtmOnSuccess').wasCalled();
+    assertApi('gtmOnFailure').wasNotCalled();
+- name: '[Event Enhancement] Uses localStorage for User Data (plain & hashed)'
+  code: |-
+    [
+      { desc: 'reads/writes plain', hash: false, preload: '{"email":"stored@example.com"}', ud: { phone: '+1999999999' }, expectEmail: 'stored@example.com', expectPhone: '+1999999999' },
+      { desc: 'sync hash', hash: true, preload: undefined, ud: { email: 'test@example.com' }, expectEmail: 'abc123hash', setupSyncHash: true },
+      { desc: 'async hash', hash: true, preload: undefined, ud: { email: 'test@example.com' }, expectEmail: 'async_hashed_test@example.com', setupAsyncHash: true },
+      { desc: 'consent denied skips storage', hash: false, preload: undefined, ud: { email: 'test@example.com' }, consentDenied: true }
+    ].forEach((scenario) => {
+      callInWindowCalls = [];
+      localStorageData = {};
+      windowData = {};
+      mock('sha256', (input, successCb, errorCb, options) => {
+        successCb('hashed_' + input);
+      });
+      if (scenario.preload) localStorageData['gtmeec-tt'] = scenario.preload;
+
+      if (scenario.setupSyncHash) {
+        windowData.dataTag256 = function() { return 'abc123hash'; };
+      }
+      if (scenario.setupAsyncHash) {
+        mock('sha256', (input, successCb) => successCb('async_hashed_' + input));
+      }
+
+      const testData = assign(assign({}, mockData), {
+        enableAdvancedMatching: true,
+        enableEventUserDataEnhancement: true,
+        storeUserDataHashed: scenario.hash,
+        userDataFromVariable: scenario.ud
+      });
+
+      if (scenario.consentDenied) {
+        testData.consentOptMode = 'optin';
+        testData.consent = undefined;
+      }
+
+      runCode(testData);
+
+      if (scenario.consentDenied) {
+        assertThat(localStorageData['gtmeec-tt']).isUndefined();
+      } else {
+        const identifyCalls = callInWindowCalls.filter((c) => c[0] === 'ttq.identify');
+        if (identifyCalls.length > 0) {
+          const userData = identifyCalls[0][1];
+          if (scenario.expectEmail && !scenario.hash) assertThat(userData.email).isEqualTo(scenario.expectEmail);
+          if (scenario.expectPhone) assertThat(userData.phone_number).isEqualTo(scenario.expectPhone);
+        }
+
+        assertThat(localStorageData['gtmeec-tt']).isDefined();
+        const stored = JSON.parse(localStorageData['gtmeec-tt']);
+        if (scenario.expectEmail) assertThat(stored.email).isEqualTo(scenario.expectEmail);
+        if (scenario.expectPhone) assertThat(stored.phone_number).isEqualTo(scenario.expectPhone);
+      }
+
+      assertApi('gtmOnSuccess').wasCalled();
+      assertApi('gtmOnFailure').wasNotCalled();
+    });
+- name: '[DL Version] enableMostRecentDataLayerEventOnly uses DL version 1'
+  code: |-
+    let capturedVersion;
+    mock('copyFromDataLayer', (key, version) => {
+      if (key === 'search_term') {
+        capturedVersion = version;
+        return 'test query';
+      }
+      return undefined;
+    });
+
+    const testData = assign(assign({}, mockData), {
+      enableDataLayerMapping: true,
+      enableMostRecentDataLayerEventOnly: true,
+      eventNameStandard: 'Search'
+    });
+
+    runCode(testData);
+
+    assertThat(capturedVersion).isEqualTo(1);
+
+    assertApi('gtmOnSuccess').wasCalled();
+    assertApi('gtmOnFailure').wasNotCalled();
+- name: '[Validation] Empty pixelIds array calls gtmOnFailure'
+  code: |-
+    mockData.pixelIds = '';
+
+    runCode(mockData);
+
+    assertApi('gtmOnSuccess').wasNotCalled();
+    assertApi('gtmOnFailure').wasCalled();
+- name: '[Queue] Existing ttq queue is reused, not recreated'
+  code: |-
+    // Pre-populate ttq in the simulated window so getOrCreateTikTokQueue
+    // returns early. Also mark the pixel as already initialized so sendEvent
+    // skips calling ttq.load (which doesn't exist on this plain object) and
+    // reaches gtmOnSuccess via the loadWasNotCalled path.
+    windowData.ttq = { existing: true };
+    windowData._tiktok_gtm_ids = { 'PIXEL123': true };
+
+    runCode(mockData);
+
+    assertApi('setInWindow').wasNotCalledWith('TiktokAnalyticsObject', 'ttq');
+
+    assertApi('gtmOnSuccess').wasCalled();
+    assertApi('gtmOnFailure').wasNotCalled();
+setup: "const JSON = require('JSON');\nconst Object = require('Object');\nconst getType\
+  \ = require('getType');\nconst callLater = require('callLater');\n\nconst PARTNER_NAME\
+  \ = 'stape_gtm_1_2_0';\n\nconst assign = (target, source) => {\n  if (!source) return\
+  \ target;\n  Object.keys(source).forEach((key) => { target[key] = source[key]; });\n\
+  \  return target;\n};\n\n// Simulated window — shared between setInWindow, copyFromWindow,\
+  \ callInWindow\nlet windowData = {};\n\nconst getWindowValue = (key) => {\n  const\
+  \ parts = key.split('.');\n  let obj = windowData;\n  for (let i = 0; i < parts.length;\
+  \ i++) {\n    if (obj === undefined || obj === null) return undefined;\n    obj\
+  \ = obj[parts[i]];\n  }\n  return obj;\n};\n\nconst setWindowValue = (key, value)\
+  \ => {\n  const parts = key.split('.');\n  let obj = windowData;\n  for (let i =\
+  \ 0; i < parts.length - 1; i++) {\n    if (obj[parts[i]] === undefined || obj[parts[i]]\
+  \ === null) obj[parts[i]] = {};\n    obj = obj[parts[i]];\n  }\n  obj[parts[parts.length\
+  \ - 1]] = value;\n};\n\nlet callInWindowCalls = [];\n\nmock('setInWindow', (key,\
+  \ value, override) => {\n  setWindowValue(key, value);\n});\n\nlet injectScriptCalls\
+  \ = [];\nmock('injectScript', (url, onsuccess, onfailure, cacheToken) => {\n  injectScriptCalls.push({\
+  \ url: url, onsuccess: onsuccess, onfailure: onfailure, cacheToken: cacheToken });\n\
+  \  // It runs sync here. In real world is async. \n  // Wrap the callbacks in callLater()\
+  \ if necessary (e.g. callLater(() => { onsuccess(); }). If doing that, also wrap\
+  \ the assertions in callLater.\n  onsuccess();\n});\n\nmock('copyFromWindow', (key)\
+  \ => {\n  return getWindowValue(key);\n});\n\nmock('callInWindow', function() {\n\
+  \  const args = [];\n  for (let i = 0; i < arguments.length; i++) {\n    args.push(arguments[i]);\n\
+  \  }\n  callInWindowCalls.push(args);\n\n  const fn = getWindowValue(args[0]);\n\
+  \  if (getType(fn) === 'function') {\n    return fn(args[1], args[2], args[3], args[4],\
+  \ args[5]);\n  }\n  return undefined;\n});\n\nlet createQueueItems = [];\nmock('createQueue',\
+  \ (name) => {\n  return (item) => { createQueueItems.push([name, item]); };\n});\n\
+  \nmock('copyFromDataLayer', () => undefined);\nmock('isConsentGranted', () => true);\n\
+  mock('addConsentListener', () => {});\nmock('getTimestampMillis', () => 1234567890);\n\
+  mock('encodeUriComponent', (val) => val);\nmock('makeString', (val) => '' + val);\n\
+  mock('makeNumber', (val) => val * 1);\nmock('getType', (val) => {\n  if (val ===\
+  \ null) return 'null';\n  if (val === undefined) return 'undefined';\n  if (getType(val)\
+  \ === 'boolean') return 'boolean';\n  if (getType(val) === 'number') return 'number';\n\
+  \  if (getType(val) === 'string') return 'string';\n  if (getType(val) === 'function')\
+  \ return 'function';\n  if (getType(val) === 'array') return 'array';\n  if (getType(val)\
+  \ === 'object') return 'object';\n  return 'object';\n});\n\nlet templateStorageData\
+  \ = {};\nmockObject('templateStorage', {\n  getItem: (key) => templateStorageData[key],\n\
+  \  setItem: (key, value) => { templateStorageData[key] = value; },\n  removeItem:\
+  \ (key) => { Object.delete(templateStorageData, key); }\n});\n\nlet localStorageData\
+  \ = {};\nmockObject('localStorage', {\n  getItem: (key) => localStorageData[key],\n\
+  \  setItem: (key, value) => { localStorageData[key] = value; }\n});\n\nmock('makeTableMap',\
+  \ (table, keyName, valueName) => {\n  const result = {};\n  table.forEach((row)\
+  \ => { result[row[keyName]] = row[valueName]; });\n  return result;\n});\n\nmock('sha256',\
+  \ (input, successCb, errorCb, options) => {\n  successCb('hashed_' + input);\n});\n\
+  \nconst mockData = {\n  pixelIds: 'PIXEL123',\n  consent: true,\n  enableGoogleConsentMode:\
+  \ false,\n  eventNameSetupMethod: 'override',\n  eventName: 'standard',\n  eventNameStandard:\
+  \ 'Pageview',\n  enableDataLayerMapping: false,\n  enableAdvancedMatching: false,\n\
+  \  enableLDU: false,\n  disableHistoryObserver: false,\n  pushEventIdToDataLayer:\
+  \ false,\n  enableEventUserDataEnhancement: false,\n  storeUserDataHashed: false,\n\
+  \  enableMostRecentDataLayerEventOnly: false,\n  gtmTagId: 'tag-1',\n  gtmEventId:\
+  \ 'event-1'\n};"
 
 
 ___NOTES___
+
+2026-04-09 - Change Notes:
+  - Pixel script (.js) now loads only after consent is granted. Previously, the
+  script loaded immediately regardless of consent state.
+  - Added TikTok Consent Mode to Google Consent Mode option.
+  - Fixed "Additional Event Parameters" fields not being read due to a field
+  name mismatch between the UI and the tag code.
+  - Updated partner name to stape_gtm_1_2_0.
+  - Removed duplicate email field reference in user data mapping.
 
 Created on 11/25/2025, 10:44:33 AM
 
