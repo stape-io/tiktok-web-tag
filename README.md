@@ -107,3 +107,6 @@ You can verify and troubleshoot your pixel implementation using three primary me
 
 ## Open Source
 The **TikTok Pixel for Google Tag Manager Web** is developed and maintained by the [Stape Team](https://stape.io/) under the Apache 2.0 license.
+
+### GTM Gallery Status
+🟢 [Listed](https://tagmanager.google.com/gallery/#/owners/stape-io/templates/tiktok-web-tag)
