@@ -69,6 +69,7 @@ ___TEMPLATE_PARAMETERS___
           }
         ],
         "simpleValueType": true,
+        "help": "\u003cb\u003eInherit from DataLayer\u003c/b\u003e\n\u003cbr/\u003e\u003cbr/\u003e\nThe following mappings will be applied to convert \u003ci\u003eData Layer event name\u003c/i\u003e into the Pixel \u003ci\u003eEvent Name\u003c/i\u003e equivalent:\n\u003cbr/\u003e\u003cbr/\u003e\n\u003cul\u003e\n\u003cli\u003e\u003ci\u003epage_view\u003c/i\u003e, \u003ci\u003egtm.init\u003c/i\u003e, \u003ci\u003egtm.js\u003c/i\u003e, \u003ci\u003egtm.historyChange\u003c/i\u003e, \u003ci\u003egtm.dom\u003c/i\u003e and \u003ci\u003epage_view_stape\u003c/i\u003e -\u003e \u003ci\u003ePageview\u003c/i\u003e\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eadd_payment_info\u003c/i\u003e, \u003ci\u003eadd_payment_info_stape\u003c/i\u003e and \u003ci\u003egtm4wp.checkoutStepEEC\u003c/i\u003e → \u003ci\u003eAddPaymentInfo\u003c/i\u003e\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eadd_to_cart\u003c/i\u003e, \u003ci\u003eadd_to_cart_stape\u003c/i\u003e and \u003ci\u003egtm4wp.addProductToCartEEC\u003c/i\u003e → \u003ci\u003eAddToCart\u003c/i\u003e\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eadd_to_wishlist\u003c/i\u003e → \u003ci\u003eAddToWishlist\u003c/i\u003e\u003c/li\u003e\n\u003cli\u003e\u003ci\u003esign_up\u003c/i\u003e and \u003ci\u003esign_up_stape\u003c/i\u003e → \u003ci\u003eCompleteRegistration\u003c/i\u003e\u003c/li\u003e\n\u003cli\u003e\u003ci\u003ebegin_checkout\u003c/i\u003e, \u003ci\u003ebegin_checkout_stape\u003c/i\u003e and \u003ci\u003egtm4wp.checkoutOptionEEC\u003c/i\u003e → \u003ci\u003eInitiateCheckout\u003c/i\u003e\u003c/li\u003e\n\u003cli\u003e\u003ci\u003egenerate_lead\u003c/i\u003e → \u003ci\u003eLead\u003c/i\u003e\u003c/li\u003e\n\u003cli\u003e\u003ci\u003epurchase\u003c/i\u003e, \u003ci\u003epurchase_stape\u003c/i\u003e and \u003ci\u003egtm4wp.orderCompletedEEC\u003c/i\u003e → \u003ci\u003ePurchase\u003c/i\u003e\u003c/li\u003e\n\u003cli\u003e\u003ci\u003esearch\u003c/i\u003e → \u003ci\u003eSearch\u003c/i\u003e\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eview_item\u003c/i\u003e, \u003ci\u003eview_item_stape\u003c/i\u003e and \u003ci\u003egtm4wp.productClickEEC\u003c/i\u003e → \u003ci\u003eViewContent\u003c/i\u003e\u003c/li\u003e\n\u003cli\u003e\u003ci\u003econtact\u003c/i\u003e → \u003ci\u003eContact\u003c/i\u003e\u003c/li\u003e\n\u003cli\u003e\u003ci\u003ecustomize_product\u003c/i\u003e → \u003ci\u003eCustomizeProduct\u003c/i\u003e\u003c/li\u003e\n\u003cli\u003e\u003ci\u003edonate\u003c/i\u003e → \u003ci\u003eDonate\u003c/i\u003e\u003c/li\u003e\n\u003cli\u003e\u003ci\u003efind_location\u003c/i\u003e → \u003ci\u003eFindLocation\u003c/i\u003e\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eschedule\u003c/i\u003e → \u003ci\u003eSchedule\u003c/i\u003e\u003c/li\u003e\n\u003cli\u003e\u003ci\u003estart_trial\u003c/i\u003e → \u003ci\u003eStartTrial\u003c/i\u003e\u003c/li\u003e\n\u003cli\u003e\u003ci\u003esubmit_application\u003c/i\u003e → \u003ci\u003eSubmitApplication\u003c/i\u003e\u003c/li\u003e\n\u003cli\u003e\u003ci\u003esubscribe\u003c/i\u003e → \u003ci\u003eSubscribe\u003c/i\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003cbr/\u003e\nFor unmapped event names, the original data layer event name is passed through as-is.",
         "subParams": [
           {
             "type": "RADIO",
@@ -877,6 +878,9 @@ function getEventName(data) {
 
     const ga4ToTikTokEventName = {
       page_view: 'Pageview',
+      'gtm.init': 'PageView',
+      'gtm.js': 'PageView',
+      'gtm.historyChange': 'PageView',
       'gtm.dom': 'Pageview',
       add_payment_info: 'AddPaymentInfo',
       add_to_cart: 'AddToCart',
@@ -2881,6 +2885,9 @@ setup: "const JSON = require('JSON');\nconst Object = require('Object');\nconst 
 
 
 ___NOTES___
+
+2026-08-13 - Change Notes:
+  - Add other data layer event names to automapping in "Inherit from DataLayer". Review your tag setup if you use this option in the Event Name Setup Method field.
 
 2026-04-09 - Change Notes:
   - Pixel script (.js) now loads only after consent is granted. Previously, the

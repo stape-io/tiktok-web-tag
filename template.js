@@ -197,6 +197,9 @@ function getEventName(data) {
 
     const ga4ToTikTokEventName = {
       page_view: 'Pageview',
+      'gtm.init': 'PageView',
+      'gtm.js': 'PageView',
+      'gtm.historyChange': 'PageView',
       'gtm.dom': 'Pageview',
       add_payment_info: 'AddPaymentInfo',
       add_to_cart: 'AddToCart',

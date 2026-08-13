@@ -1,6 +1,8 @@
 homepage: 'https://stape.io/'
 documentation: 'https://github.com/stape-io/tiktok-web-tag'
 versions:
+  - sha: 663e44723884639c4c7625abc4f00799a7d45500
+    changeNotes: Added other data layer event names to automapping in Inherit from DataLayer.
   - sha: 285b623469173a25d6b5506bdf49c7d530e8f005
     changeNotes: Refactored consent handling.
   - sha: 9ad173e9c8556df1d179567527acce7816252864
